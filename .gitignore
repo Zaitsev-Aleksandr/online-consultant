@@ -4,3 +4,7 @@
 **/build
 **/dist
 **/node_modules
+/.gitignore
+gulpfile.js
+package-lock.json
+package.json
