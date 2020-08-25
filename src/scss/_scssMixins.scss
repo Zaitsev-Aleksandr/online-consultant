@@ -1,0 +1,102 @@
+/*_________common colors___________________*/
+$icon-border-color: #C4CBE2;
+$active-color: #213991;
+$common-text: #7D7D7D;
+$bg-color: #f0f1f8;
+$modal-wrap-bg: rgba(0, 0, 0, .5);
+$success-color: #92E76A;
+$danger-color:#FD8282;
+
+
+/*__________@extend______________*/
+
+%commonFontStyle {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+%smallModalBoxShadow {
+  box-shadow: 0 0 11px 2px rgba(0, 0, 0, .3);
+}
+
+%downModalBoxShadow {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+%leftModalBoxShadow {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+%commonButton{
+  font-size: 14px;
+  border-width: 1px;
+  border-style: solid;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  align-items: center;
+  justify-content: center;
+  width: min-content;
+  padding: 0 10px;
+  border-radius: 6px;
+  background-color: transparent;
+  height: 38px;
+  outline: none;
+}
+
+%commonActiveBtn{
+  color: white;
+  background-color: $active-color;
+  border-color: $active-color;
+  &:hover{
+    color: $active-color;
+    background-color: white;
+
+  }
+}
+%commonLightBtn{
+  color: $common-text;
+  background-color: white;
+  border-color: $icon-border-color;
+  &:hover{
+    color: $active-color;
+    border-color: $active-color;
+
+  }
+}
+
+%iconButton {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  min-width: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .icon-button-label {
+    color: $common-text;
+    font-size: 12px;
+  }
+
+  .fa, .fas, .far {
+    font-size: 18px;
+    color: $icon-border-color;
+  }
+
+  &:hover, &.active {
+    .icon-button-label { color: $active-color;}
+
+    .fa, .fas, .far {
+      color: $active-color;
+    }
+  }
+}
+%common-input{
+  height: 36px;
+  border: 1px solid $border-color;
+  border-radius: 6px;
+  outline: none;
+}
